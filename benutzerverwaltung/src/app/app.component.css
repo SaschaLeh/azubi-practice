@@ -1,0 +1,42 @@
+#header {
+  height: 5rem;
+  background-color: deepskyblue;
+  color: #222222;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+#formular {
+  padding: 1rem 3em;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 0;
+}
+
+#speichern {
+  border: 1px solid blue;
+  border-radius: 50px;
+  background-color: #038cb9;
+  font-weight: bold;
+  color: white;
+  height: 30px;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+#speichern:hover {
+  background-color: #56b1cf;
+}
+
+.list-wrapper {
+  border-top: 3px dotted black;
+}
+
+#liste {
+  margin: 1rem 4rem;
+}
