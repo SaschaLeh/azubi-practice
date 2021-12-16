@@ -34,6 +34,6 @@ export class AppComponent {
   title = 'Benutzerverwaltung';
 
   public onSubmit(form: NgForm) {
-    console.log(form.value);
+    this.appUsers = [form.value as AppUser, ...this.appUsers];
   }
 }
