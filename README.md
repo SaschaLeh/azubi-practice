@@ -27,12 +27,6 @@ Die Anwendung soll folgende Bestandteile beinhalten:
 - Wird das Formular mit einem Click auf Submit abgeschickt soll der Benutzer unterhalb des Formulars in Form einer **Unsortierten-Liste** angezeigt werden (alles in einer Zeile) Bspw.
   - Herr Hans Zimmer, hans.zimmer@xzy.de, 21 Jahre
 
-> **Tipp**
->
-> Ihr könnt Variablen innerhalb eines Strings ganz einfach folgendermaßen einbinden
-
-    `string text ${variable} string text`
-
 ## :books: Aufgabe 1
 
 #
