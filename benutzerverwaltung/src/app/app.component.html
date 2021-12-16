@@ -18,7 +18,20 @@
   </form>
   <div class="list-wrapper">
     <ul id="liste">
-      <li>Herr Hans Zimmer, hans.zimmer@xzy.de, 21 Jahre</li>
+      <li *ngFor="let user of appUsers">
+        {{
+          user.salutation +
+            " " +
+            user.name +
+            " " +
+            user.surename +
+            "," +
+            user.email +
+            "," +
+            user.age +
+            " Jahre"
+        }}
+      </li>
     </ul>
   </div>
 </div>
