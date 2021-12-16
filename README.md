@@ -27,15 +27,11 @@ Die Anwendung soll folgende Bestandteile beinhalten:
 - Wird das Formular mit einem Click auf Submit abgeschickt soll der Benutzer unterhalb des Formulars in Form einer **Unsortierten-Liste** angezeigt werden (alles in einer Zeile) Bspw.
   - Herr Hans Zimmer, hans.zimmer@xzy.de, 21 Jahre
 
----
-
-**Tipp**
-
-Ihr könnt Variablen innerhalb eines Strings ganz einfach folgendermaßen einbinden
+> **Tipp**
+>
+> Ihr könnt Variablen innerhalb eines Strings ganz einfach folgendermaßen einbinden
 
     `string text ${variable} string text`
-
----
 
 ## :books: Aufgabe 1
 
@@ -69,13 +65,10 @@ Legt bei einem Click auf den Button einen neuen Nutzer an und fügt ihn der bere
 
 Komplette Lösung in Branch `aufgabe-3`
 
----
+>**Tipp**
+>
+>Imports nicht vergessen :wink:
 
-**Tipp**
-
-Imports nicht vergessen :wink:
-
----
 
 ## :bomb: Zusatzaufgabe - Validierung
 
@@ -95,16 +88,14 @@ Folgende Aufgabe:
 
 Komplette Lösung in Branch `zusatz`
 
----
 
-**Tipp**
+>**Tipp**
+>
+>Hier ein paar Nachschlagehilfen:
+>
+>* [EmailValidator]
+>* [TemplateDrivenForms]
 
-Hier ein paar Nachschlagehilfen:
-
-- [EmailValidator]
-- [TemplateDrivenForms]
-
----
 
 [vscode]: https://code.visualstudio.com/
 [emailvalidator]: https://angular.io/api/forms/EmailValidator
