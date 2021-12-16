@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AppUser } from './model/app-user.model';
 
 @Component({
@@ -31,4 +32,8 @@ export class AppComponent {
     },
   ];
   title = 'Benutzerverwaltung';
+
+  public onSubmit(form: NgForm) {
+    console.log(form.value);
+  }
 }

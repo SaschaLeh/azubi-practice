@@ -1,19 +1,19 @@
 <h1 id="header">{{ title }}</h1>
 <div class="wrapper">
-  <form id="formular" action="">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" id="formular">
     <label for="salutation">Anrede</label>
-    <select name="salutation">
+    <select ngModel id="salutation" name="salutation">
       <option value="Frau">Frau</option>
       <option value="Herr">Herr</option>
     </select>
     <label for="name">Vorname</label>
-    <input type="text" name="name" />
+    <input ngModel type="text" name="name" />
     <label for="surename">Nachname</label>
-    <input type="text" name="surename" />
+    <input ngModel type="text" name="surename" />
     <label for="email">E-Mail</label>
-    <input type="email" name="email" />
+    <input ngModeltype="email" name="email" />
     <label for="age">Alter</label>
-    <input type="number" name="age" />
+    <input ngModel type="number" name="age" />
     <button id="speichern" type="submit">Speichern</button>
   </form>
   <div class="list-wrapper">
@@ -34,4 +34,7 @@
       </li>
     </ul>
   </div>
+  <hr />
+  <h2>Zum debuggen (Wert des Formulars):</h2>
+  {{ userForm.value | json }}
 </div>
