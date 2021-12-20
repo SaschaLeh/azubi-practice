@@ -40,3 +40,8 @@
 #liste {
   margin: 1rem 4rem;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+}

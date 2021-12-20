@@ -8,6 +8,15 @@ import { AppUser } from './model/app-user.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  submitted = false;
+  public formModel: AppUser = {
+    salutation: '',
+    name: '',
+    surename: '',
+    email: '',
+    age: 0,
+  };
+
   public appUsers: AppUser[] = [
     {
       salutation: 'Herr',
@@ -34,6 +43,10 @@ export class AppComponent {
   title = 'Benutzerverwaltung';
 
   public onSubmit(form: NgForm) {
+    this.submitted = true;
+    if (!form.valid) return;
     this.appUsers = [form.value as AppUser, ...this.appUsers];
+    this.submitted = false;
+    form.resetForm();
   }
 }

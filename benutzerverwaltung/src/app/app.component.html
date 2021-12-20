@@ -2,18 +2,88 @@
 <div class="wrapper">
   <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" id="formular">
     <label for="salutation">Anrede</label>
-    <select ngModel id="salutation" name="salutation">
-      <option value="Frau">Frau</option>
-      <option value="Herr">Herr</option>
-    </select>
+    <div>
+      <select
+        #salutation="ngModel"
+        [(ngModel)]="formModel.salutation"
+        id="salutation"
+        name="salutation"
+        required
+      >
+        <option value="Frau">Frau</option>
+        <option value="Herr">Herr</option>
+      </select>
+      <span *ngIf="salutation.invalid && submitted" class="error">
+        Anrede ist Pflicht!
+      </span>
+    </div>
+
     <label for="name">Vorname</label>
-    <input ngModel type="text" name="name" />
+    <div>
+      <input
+        #name="ngModel"
+        [(ngModel)]="formModel.name"
+        type="text"
+        name="name"
+        maxlength="20"
+      />
+      <span
+        *ngIf="name.invalid && submitted && name.hasError('maxlength')"
+        class="error"
+      >
+        Max. 20 Zeichen
+      </span>
+    </div>
+
     <label for="surename">Nachname</label>
-    <input ngModel type="text" name="surename" />
+    <div>
+      <input
+        #surename="ngModel"
+        [(ngModel)]="formModel.surename"
+        type="text"
+        name="surename"
+        maxlength="20"
+      />
+      <span
+        *ngIf="surename.invalid && submitted && surename.hasError('maxlength')"
+        class="error"
+      >
+        Max. 20 Zeichen
+      </span>
+    </div>
     <label for="email">E-Mail</label>
-    <input ngModel type="email" name="email" />
+    <div>
+      <input
+        #email="ngModel"
+        [(ngModel)]="formModel.email"
+        type="email"
+        name="email"
+        email
+      />
+      <span
+        *ngIf="email.invalid && submitted && email.hasError('email')"
+        class="error"
+      >
+        Muss der Form xyz@asdf.de entsprechen!
+      </span>
+    </div>
     <label for="age">Alter</label>
-    <input ngModel type="number" name="age" />
+    <div>
+      <input
+        #age="ngModel"
+        [(ngModel)]="formModel.age"
+        type="number"
+        name="age"
+        min="18"
+      />
+      <span
+        *ngIf="age.invalid && submitted && age.hasError('min')"
+        class="error"
+      >
+        Mindestalter 18
+      </span>
+    </div>
+
     <button id="speichern" type="submit">Speichern</button>
   </form>
   <div class="list-wrapper">
@@ -36,5 +106,6 @@
   </div>
   <hr />
   <h2>Zum debuggen (Wert des Formulars):</h2>
+  Form valid? : <b>{{ userForm.valid }}</b> <br />
   {{ userForm.value | json }}
 </div>
